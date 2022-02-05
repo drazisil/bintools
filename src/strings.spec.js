@@ -4,9 +4,9 @@ const strings = require('./strings')
 describe('toLocale()', () => {
     test('when passed a key and locale, returns a string', () => {
         // Arrange
-        const stringKey = 'UNABLE_TO_CONVERT'
+        const stringKey = 'UNABLE_TO_CREATE_FROM'
         const locale = 'enUS'
-        const expectedResult = 'bintools was unable to convert'
+        const expectedResult = 'bintools was not able to create object'
 
         // Act
         const result = strings.toLocale(stringKey, locale)

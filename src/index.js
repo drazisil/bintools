@@ -1,26 +1,7 @@
-const strings = require('./strings')
-
-function isCompatible(input) {
-    if (input instanceof Buffer | 
-        input instanceof Int8Array |
-        input instanceof Uint8Array |
-        input instanceof Uint8ClampedArray) {
-        return true
-    }
-    return false
-}
-
-function toBuffer(input) {
-    if (!isCompatible(input)) {
-        throw new Error(strings.toLocale('UNABLE_TO_CONVERT', 'enUS'))
-    }
-
-    if (input instanceof Buffer) {
-        return input
-    }
-}
+const { BinaryObject } = require('./BinaryObject')
+const { BinTools}  = require('./BinTools')
 
 module.exports = {
-    isCompatible,
-    toBuffer
+    BinTools,
+    BinaryObject,
 }
