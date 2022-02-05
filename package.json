@@ -1,0 +1,21 @@
+{
+  "name": "@drazisil/bintools",
+  "version": "0.1.0",
+  "description": "Works with bits and other binary structures",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "foo"
+  },
+  "keywords": [
+    "binary"
+  ],
+  "author": "me",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.0"
+  }
+}
