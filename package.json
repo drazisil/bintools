@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "foo"
+    "url": "https://github.com/drazisil/bintools.git"
   },
   "keywords": [
     "binary"
