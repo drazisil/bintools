@@ -1,13 +1,13 @@
-const enUS = require('./locales/enUS')
+import enUS from './locales/enUS'
 
-const locales = {
+const locales: Record<string, Record<string, string>> = {
     enUS
 }
 
 /**
  * @param {string} locale
  */
-function toLocale(stringKey, locale) {
+export function toLocale(stringKey: string, locale: string) {
     if (typeof locales[locale] === "undefined") {
         throw new Error(`The locale ${locale} was not found!`)
     }
@@ -15,8 +15,4 @@ function toLocale(stringKey, locale) {
         throw new Error(`The key ${stringKey} was not found the ${locale} locale!`)
     }
     return locales[locale][stringKey]
-}
-
-module.exports = {
-    toLocale
 }

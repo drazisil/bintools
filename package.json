@@ -2,9 +2,11 @@
   "name": "@drazisil/bintools",
   "version": "0.1.0",
   "description": "Works with bits and other binary structures",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,9 @@
   "author": "me",
   "license": "MIT",
   "devDependencies": {
-    "jest": "27.5.0"
+    "@types/jest": "^27.4.0",
+    "jest": "^27.5.0",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
   }
 }

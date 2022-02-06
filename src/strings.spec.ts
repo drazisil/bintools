@@ -1,5 +1,5 @@
-const { describe, test, expect } = require('@jest/globals')
-const strings = require('./strings')
+import { describe, test, expect } from '@jest/globals'
+import {toLocale} from './strings'
 
 describe('toLocale()', () => {
     test('when passed a key and locale, returns a string', () => {
@@ -9,7 +9,7 @@ describe('toLocale()', () => {
         const expectedResult = 'bintools was not able to create object'
 
         // Act
-        const result = strings.toLocale(stringKey, locale)
+        const result = toLocale(stringKey, locale)
 
         // Assert
         expect(result).toEqual(expectedResult)
@@ -22,7 +22,7 @@ describe('toLocale()', () => {
         const expectedError = 'The locale abCD'
 
         // Act
-        expect(() => strings.toLocale(stringKey, locale)).toThrowError(expectedError)
+        expect(() => toLocale(stringKey, locale)).toThrowError(expectedError)
     })
 
     test('when key is not found, throw an error', () => {
@@ -32,6 +32,6 @@ describe('toLocale()', () => {
         const expectedError = 'The key TEST_ERROR'
 
         // Act
-        expect(() => strings.toLocale(stringKey, locale)).toThrowError(expectedError)
+        expect(() => toLocale(stringKey, locale)).toThrowError(expectedError)
     })
 })

@@ -1,5 +1,5 @@
-const { describe, test, expect } = require('@jest/globals');
-const { BinTools, BinaryObject } = require('./index');
+import { describe, test, expect } from '@jest/globals';
+import { BinTools, BinaryObject } from './index';
 
 describe('isInstanceOf()', () => {
     test('when passed an instance of BinaryObject, return true', () => {
